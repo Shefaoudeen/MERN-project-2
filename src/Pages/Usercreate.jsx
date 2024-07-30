@@ -10,7 +10,7 @@ const Usercreate = () => {
     if (username != "") {
       const newUser = { userName: username };
       axios
-        .post("http://localhost:5000/user/add", newUser)
+        .post("https://mern-project-2-q9pc.onrender.com/user/add", newUser)
         .then(() => console.log("Successfully added"))
         .catch((err) => console.log(err));
       navigate("/");

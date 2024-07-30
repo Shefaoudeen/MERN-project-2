@@ -14,7 +14,7 @@ const Createexe = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/user")
+      .get("https://mern-project-2-q9pc.onrender.com/user")
       .then((res) => setUserList(res.data.map((users) => users.userName)))
       .catch((err) => console.log(err));
   }, []);
@@ -36,7 +36,10 @@ const Createexe = () => {
       };
       console.log(newExercise);
       axios
-        .post("http://localhost:5000/exercise/add", newExercise)
+        .post(
+          "https://mern-project-2-q9pc.onrender.com/exercise/add",
+          newExercise
+        )
         .then(() => {
           console.log("Added successfully");
           navigate("/");

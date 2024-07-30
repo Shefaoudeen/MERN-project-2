@@ -17,7 +17,7 @@ const Editexercise = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/exercise/${id}`)
+      .get(`https://mern-project-2-q9pc.onrender.com/exercise/${id}`)
       .then((res) => {
         setExeDetail();
         console.log("testing");
@@ -38,7 +38,10 @@ const Editexercise = () => {
       date: new Date(date),
     };
     axios
-      .post(`http://localhost:5000/exercise/update/${id}`, edited)
+      .post(
+        `https://mern-project-2-q9pc.onrender.com/exercise/update/${id}`,
+        edited
+      )
       .then(() => console.log("Editted successfully"))
       .catch((err) => {
         console.log(err);

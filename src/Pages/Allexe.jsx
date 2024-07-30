@@ -11,7 +11,7 @@ const Allexe = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/exercise")
+      .get("https://mern-project-2-q9pc.onrender.com/exercise")
       .then((res) => {
         setAllExe(res.data);
         console.log(allExe);
@@ -27,9 +27,11 @@ const Allexe = () => {
   };
 
   const handleDeleteExercise = (id) => {
-    axios.delete(`http://localhost:5000/exercise/${id}`).then(() => {
-      console.log("Deleted Successfully").catch((err) => console.log(err));
-    });
+    axios
+      .delete(`https://mern-project-2-q9pc.onrender.com/exercise/${id}`)
+      .then(() => {
+        console.log("Deleted Successfully").catch((err) => console.log(err));
+      });
     setDeleteside(false);
     window.location.reload();
   };
